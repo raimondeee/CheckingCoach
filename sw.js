@@ -1,9 +1,9 @@
 // CheckingCoach offline service worker.
 // The BUILD id and PRECACHE list placeholders are filled in at build time (vite.config.ts → swVersion plugin),
 // so every deploy gets a new cache name and this file's bytes change → the browser installs it.
-const BUILD = '72f13b7e2b42'
+const BUILD = '3b80ac026686'
 const CACHE = `checking-${BUILD}`
-const PRECACHE = ["./","./assets/index-CPtiQpOl.js","./assets/index-DeZpvQ7u.css","./icons/icon-180.png","./icons/icon-192.png","./icons/icon-512.png","./index.html","./manifest.webmanifest"]
+const PRECACHE = ["./","./assets/index-CO0fFSol.js","./assets/index-DeZpvQ7u.css","./icons/icon-180.png","./icons/icon-192.png","./icons/icon-512.png","./index.html","./manifest.webmanifest"]
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(PRECACHE.map((u) => new Request(u, { cache: 'reload' })))).then(() => self.skipWaiting()))
